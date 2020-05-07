@@ -1,3 +1,7 @@
+```
+NOTE: This fork exists to provide updated dependencies and bug fixes from PRs that have stalled in the upstream repo.
+```
+
 # Headless Chrome Crawler [![npm](https://badge.fury.io/js/headless-chrome-crawler.svg)](https://www.npmjs.com/package/headless-chrome-crawler) [![build](https://circleci.com/gh/yujiosaka/headless-chrome-crawler/tree/master.svg?style=shield&circle-token=ba45f930aed7057b79f2ac09df6be3e1b8ee954b)](https://circleci.com/gh/yujiosaka/headless-chrome-crawler/tree/master) [![Greenkeeper badge](https://badges.greenkeeper.io/yujiosaka/headless-chrome-crawler.svg)](https://greenkeeper.io/)
 
 ###### [API](https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/API.md) | [Examples](https://github.com/yujiosaka/headless-chrome-crawler/tree/master/examples) | [Tips](https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/TIPS.md) | [Code of Conduct](https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/CODE_OF_CONDUCT.md) | [Contributing](https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/CONTRIBUTING.md) | [Changelog](https://github.com/yujiosaka/headless-chrome-crawler/blob/master/docs/CHANGELOG.md)
