@@ -11,7 +11,7 @@
     "greenkeeper-lockfile-upload": "greenkeeper-lockfile-upload",
     "lint": "eslint --quiet -f codeframe . || eslint .",
     "jest-exclude-redis-cache": "yarn jest $(find test -name '*.test.js' -not -name 'redis.test.js')",
-    "jest": "jest --maxWorkers=1",
+    "jest": "jest --maxWorkers=2",
     "test": "yarn tsc && yarn lint && yarn jest-exclude-redis-cache",
     "test-all": "yarn tsc && yarn lint && yarn jest",
     "tsc": "tsc -p ."
@@ -28,7 +28,7 @@
     "debug": "3.1.0",
     "jquery": "3.4.1",
     "lodash": "4.17.15",
-    "puppeteer": "1.19.0",
+    "puppeteer": "^3.0.4",
     "request": "2.87.0",
     "request-promise": "4.2.2",
     "robots-parser": "1.0.2"
@@ -42,7 +42,6 @@
     "@types/debug": "0.0.30",
     "@types/lodash": "4.14.136",
     "@types/node": "10.3.4",
-    "@types/puppeteer": "1.19.0",
     "@types/request-promise": "4.1.41",
     "eslint": "5.0.1",
     "eslint-config-airbnb": "17.0.0",
@@ -67,5 +66,8 @@
   ],
   "engines": {
     "node": ">=8.10.0"
+  },
+  "jest": {
+    "testTimeout": 30000
   }
 }

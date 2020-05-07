@@ -491,7 +491,7 @@ describe('HCCrawler', () => {
           this.crawler = await HCCrawler.launch(extend({
             evaluatePage,
             onSuccess: this.onSuccess,
-            device: 'iPhone 6',
+            device: 'iPhone 8',
           }, DEFAULT_OPTIONS));
         });
 
@@ -603,7 +603,7 @@ describe('HCCrawler', () => {
             expect(this.onError.mock.calls[0][0].options.url).toBe(INDEX_PAGE);
             expect(this.onError.mock.calls[0][0].depth).toBe(1);
             expect(this.onError.mock.calls[0][0].previousUrl).toBe(null);
-            expect(this.onError.mock.calls[0][0].message).toContain('Navigation Timeout Exceeded:');
+            expect(this.onError.mock.calls[0][0].message).toContain('Navigation timeout');
           });
         });
 
@@ -621,7 +621,7 @@ describe('HCCrawler', () => {
             expect(this.onError.mock.calls[0][0].options.url).toBe(INDEX_PAGE);
             expect(this.onError.mock.calls[0][0].depth).toBe(1);
             expect(this.onError.mock.calls[0][0].previousUrl).toBe(null);
-            expect(this.onError.mock.calls[0][0].message).toContain('Navigation Timeout Exceeded:');
+            expect(this.onError.mock.calls[0][0].message).toContain('Navigation timeout');
           });
 
           test("fails request with waitUntil = 'load'", async () => {
@@ -631,7 +631,7 @@ describe('HCCrawler', () => {
             expect(this.onError.mock.calls[0][0].options.url).toBe(INDEX_PAGE);
             expect(this.onError.mock.calls[0][0].depth).toBe(1);
             expect(this.onError.mock.calls[0][0].previousUrl).toBe(null);
-            expect(this.onError.mock.calls[0][0].message).toContain('Navigation Timeout Exceeded:');
+            expect(this.onError.mock.calls[0][0].message).toContain('Navigation timeout');
           });
 
           test("succeeds request with waitUntil = 'domcontentloaded'", async () => {
@@ -653,7 +653,7 @@ describe('HCCrawler', () => {
             expect(this.onError.mock.calls[0][0].options.url).toBe(INDEX_PAGE);
             expect(this.onError.mock.calls[0][0].depth).toBe(1);
             expect(this.onError.mock.calls[0][0].previousUrl).toBe(null);
-            expect(this.onError.mock.calls[0][0].message).toContain('Navigation Timeout Exceeded:');
+            expect(this.onError.mock.calls[0][0].message).toContain('Navigation timeout');
           });
         });
       });
@@ -924,7 +924,7 @@ describe('HCCrawler', () => {
           });
         });
 
-        describe('when the crawler is launched with exporter = JSONLineExporter', async () => {
+        describe('when the crawler is launched with exporter = JSONLineExporter', () => {
           beforeEach(async () => {
             await removeTemporaryFile(JSON_FILE);
             const exporter = new JSONLineExporter({
